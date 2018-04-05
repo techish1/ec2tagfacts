@@ -91,8 +91,8 @@ else
   begin
 
     # This is why aws cli is required
-    #jsonString = `. /etc/profile.d/proxy.sh;aws ec2 describe-tags --filters "Name=resource-id,Values=#{instance_id}" --region #{region} --output json`
-    jsonString = `aws ec2 describe-tags --filters "Name=resource-id,Values=#{instance_id}" --output json`
+    jsonString = `. /etc/profile.d/proxy.sh;aws ec2 describe-tags --filters "Name=resource-id,Values=#{instance_id}" --region #{region} --output json`
+    #jsonString = `aws ec2 describe-tags --filters "Name=resource-id,Values=#{instance_id}" --output json`
 
     debug_msg("JSON is...\n#{jsonString}")
 
